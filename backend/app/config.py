@@ -2,17 +2,18 @@ from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-BACKEND_DIR = Path(__file__).resolve().parents[1]   
-PROJECT_DIR = BACKEND_DIR.parent                    
+BACKEND_DIR = Path(__file__).resolve().parents[1]
+PROJECT_DIR = BACKEND_DIR.parent
 
 class Settings(BaseSettings):
     #gemini
-    gemini_api_key: str                                   
+    gemini_api_key: str
     gemini_generation_model: str = "gemini-3.1-flash-lite"
     gemini_embedding_model: str = "gemini-embedding-2"
 
     #storage
     data_dir: Path = BACKEND_DIR / "storage"
+    max_upload_mb: int = 25
 
     #chunking and retrieval
     chunk_size: int = 900
@@ -20,8 +21,7 @@ class Settings(BaseSettings):
     top_k_candidates: int = 20
     top_k_final: int = 5
 
-    model_config = SettingsConfigDict(env_file=PROJECT_DIR / ".env", 
-                                      extra="ignore")
+    model_config = SettingsConfigDict(env_file=PROJECT_DIR / ".env",extra="ignore")
 
     @property
     def uploads_dir(self) -> Path:
