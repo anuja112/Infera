@@ -8,6 +8,7 @@ from app.db.models import Chunk, Document, Job
 from app.db.session import get_session
 from app.retrieval.vector_store import vector_store
 from app.schemas.models import DocumentInfo
+from app.retrieval.keyword_store import keyword_store
 
 router = APIRouter(tags=["documents"])
 
@@ -16,8 +17,7 @@ router = APIRouter(tags=["documents"])
 def list_documents(session: Session = Depends(get_session)):
     docs = session.exec(select(Document).order_by(Document.created_at.desc())).all()
     return [
-        DocumentInfo(id=d.id, filename=d.filename, file_type=d.file_type,
-                     num_chunks=d.num_chunks, created_at=d.created_at)
+        DocumentInfo(id=d.id, filename=d.filename, file_type=d.file_type,num_chunks=d.num_chunks, created_at=d.created_at)
         for d in docs
     ]
 
@@ -37,6 +37,7 @@ def delete_document(document_id: int, session: Session = Depends(get_session)):
     for row in [*chunks, *jobs, doc]:
         session.delete(row)
     session.commit()
+    keyword_store.invalidate()
 
     #then the vectors, then the saved file.
     vector_store.remove(chunk_ids)
