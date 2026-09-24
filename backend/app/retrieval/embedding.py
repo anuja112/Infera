@@ -7,7 +7,7 @@ from app.config import settings
 from app.gemini_client import client
 
 EMBED_BATCH_SIZE = 50
-_RETRYABLE_CODES = {429, 500, 502, 503, 504}   # retryable error codes
+_RETRYABLE_CODES = {429, 500, 502, 503, 504}
 _MAX_ATTEMPTS = 5
 
 
@@ -29,7 +29,6 @@ def _config(task_type: str) -> Optional[types.EmbedContentConfig]:
 
 
 def _as_contents(texts: List[str]) -> List[types.Content]:
-    # ONE Content per text. A bare list of strings can be read as "several parts of ONE item" and come back as a single vector, so we are explicit.
     return [types.Content(parts=[types.Part(text=t)]) for t in texts]
 
 
