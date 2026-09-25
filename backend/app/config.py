@@ -21,7 +21,9 @@ class Settings(BaseSettings):
     chunk_overlap: int = 150
     top_k_candidates: int = 20
     top_k_final: int = 5
-
+    
+    #cache
+    cache_ttl_seconds: int = 600
     model_config = SettingsConfigDict(env_file=PROJECT_DIR / ".env",extra="ignore")
 
     @property
