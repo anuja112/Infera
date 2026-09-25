@@ -1,0 +1,72 @@
+[
+  {
+    "question": "What is the main purpose of artificial intelligence?",
+    "expected_answer_contains": "perform tasks that typically require human intelligence",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "Why does a document-based AI system need retrieval when working with private files?",
+    "expected_answer_contains": "language model does not automatically have access to a user's private documents",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "How does RAG improve the way a language model answers questions about documents?",
+    "expected_answer_contains": "searches a collection of documents for information relevant to the user's question",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "Why is text divided into smaller pieces before being processed by an AI system?",
+    "expected_answer_contains": "divided into smaller pieces called chunks",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "How can a system determine whether two pieces of text have similar meanings even when they use different words?",
+    "expected_answer_contains": "embeddings",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "Why is keyword retrieval useful in addition to semantic search?",
+    "expected_answer_contains": "exact terms, names, identifiers, technical expressions, or keywords",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "Why is grounding important when an AI system answers questions using private or domain-specific information?",
+    "expected_answer_contains": "make generated answers more grounded in the provided information",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "What is Retrieval-Augmented Generation commonly abbreviated as?",
+    "expected_answer_contains": "RAG",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "What is the exact error code given as an example of a term that keyword search can identify?",
+    "expected_answer_contains": "ERR_CONNECTION_RESET",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "Which keyword retrieval algorithm is specifically mentioned in the document?",
+    "expected_answer_contains": "BM25",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "What similarity measurement is mentioned for comparing embeddings?",
+    "expected_answer_contains": "cosine similarity",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "What are the two major phases of a complete document-based question-answering application?",
+    "expected_answer_contains": "ingestion and querying",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "What metadata examples should be stored along with embeddings during ingestion?",
+    "expected_answer_contains": "document ID, page number, and chunk ID",
+    "expected_source_filename": "Untitled document.pdf"
+  },
+  {
+    "question": "What does the hybrid retrieval pipeline combine before ranking candidate chunks?",
+    "expected_answer_contains": "Vector Search + Keyword Search",
+    "expected_source_filename": "Untitled document.pdf"
+  }
+]
