@@ -322,6 +322,35 @@
         border-radius:7px !important;
         background-color:var(--panel) !important;
     }
+    [data-baseweb="select"],
+    [data-baseweb="select"] *,
+    [data-baseweb="select"] input{
+        color:var(--ink) !important;
+        -webkit-text-fill-color:var(--ink) !important;
+    }
+    [data-baseweb="select"] svg{
+        fill:var(--ink) !important;
+        color:var(--ink) !important;
+    }
+    [data-baseweb="popover"] > div,
+    [role="listbox"],
+    [role="menu"],
+    [data-testid="stMainMenu"] > div{
+        background-color:var(--panel) !important;
+        color:var(--ink) !important;
+        border-color:var(--hairline) !important;
+    }
+    [role="option"],
+    [role="menuitem"],
+    [data-testid="stMainMenu"] *,
+    [data-baseweb="popover"] *{
+        color:var(--ink) !important;
+        -webkit-text-fill-color:var(--ink) !important;
+    }
+    [role="option"]:hover,
+    [role="menuitem"]:hover{
+        background-color:var(--sage-tint) !important;
+    }
     [data-testid="stFileUploaderDropzoneInstructions"] small{ color:var(--sage); }
     [data-testid="stCaptionContainer"], .stCaption, .brand-sub,
     .hero-desc, .empty-state p{ color:var(--sage) !important; }
