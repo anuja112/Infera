@@ -4,7 +4,6 @@ import threading
 from fastapi import FastAPI
 from sqlmodel import Session, select
 
-from app.api import documents, ingest, search
 from app.db.models import Chunk
 from app.db.session import engine, init_db
 from app.retrieval.vector_store import vector_store
