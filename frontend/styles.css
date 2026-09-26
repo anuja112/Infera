@@ -16,6 +16,23 @@
     .stApp{
         background-color:var(--cream);
     }
+    /* Keep Streamlit's Fork and overflow controls readable in dark mode. */
+    header[data-testid="stHeader"],
+    header[data-testid="stHeader"] [data-testid="stToolbar"]{
+        background-color:var(--cream) !important;
+        color:var(--ink) !important;
+    }
+    header[data-testid="stHeader"] button,
+    header[data-testid="stHeader"] a,
+    header[data-testid="stHeader"] [role="button"]{
+        color:var(--ink) !important;
+    }
+    header[data-testid="stHeader"] button svg,
+    header[data-testid="stHeader"] a svg,
+    header[data-testid="stHeader"] [role="button"] svg{
+        color:var(--ink) !important;
+        fill:currentColor;
+    }
     .main .block-container{
         max-width:1080px;
         padding:3.25rem 3rem 7rem;
