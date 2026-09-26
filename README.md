@@ -1,4 +1,4 @@
-# Infera — Document Intelligence & Hybrid Retrieval System
+# Infera — Document Intelligence Platform
 
 Infera is a document-based question-answering platform that lets users
 interact with their own PDF, TXT, and Markdown documents.
