@@ -8,7 +8,7 @@ import streamlit as st
 
 BACKEND_URL = os.environ.get(
     "BACKEND_URL",
-    "https://infera-backend-ngqc.onrender.com"
+    "https://infera01.onrender.com"
 )
 POLL_SECONDS = 1.0
 
