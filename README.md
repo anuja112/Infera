@@ -194,7 +194,22 @@ accuracy, groundedness, and latency across the pipeline stages.
 Add the results from your own evaluation run here:
 
 ```text
-<PASTE YOUR run_eval.py OUTPUT HERE>
+=== Retrieval comparison (Recall@5: right document found in top 5?) ===
+  vector          100.0%
+  keyword         100.0%
+  hybrid          100.0%
+  hybrid_rerank   100.0%
+
+=== End-to-end pipeline (hybrid_rerank + query rewrite + groundedness check) ===
+  Questions run       : 14  (0 errored)
+  Accuracy (proxy)    : 64.3%
+  Grounded rate       : 100.0%
+  Avg total latency   : 15370 ms
+  Avg time per stage  :
+    rewrite_query         3969.3 ms
+    retrieve              1774.6 ms
+    generate_answer       4977.0 ms
+    check_groundedness    4649.4 ms
 ```
 
 ## API reference
